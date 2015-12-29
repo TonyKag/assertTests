@@ -36,27 +36,6 @@ public class ResetPasswordTest {
 	@Test
 	public void resetPassword() {
 		
-//		char myCharVar2 = 'n';
-//		byte myByteVar2 = 12;
-//		short myShortVar2 = -32_768;
-//		int myIntVar2 = 1_102_638_251;
-//		long myLongVar2 = 3_212_254_265_847_044_902L;
-//		float myFloatVar2 = 1.4013642F;
-//		double myDoubleVar2 = 4.252_216_527_265_915;
-//		boolean myBooleanVar2 = true;
-
-		
-//		System.out.println(		
-//		myCharVar2 + "\n" +
-//		myByteVar2 + "\n" +
-//		myShortVar2 + "\n" +
-//		myIntVar2 + "\n" +
-//		myLongVar2 + "\n" +
-//		myFloatVar2 + "\n" +
-//		myDoubleVar2 + "\n" +
-//		myBooleanVar2 + "\n");
-
-		
 		HomePage__ homePage = PageFactory
 				.initElements(driver, HomePage__.class);
 		
@@ -77,9 +56,9 @@ public class ResetPasswordTest {
 		// click on "Continue" btn
 		Confirmation__ confirmationPage = resetPasswordPage
 				.clickOnContinueAndNavigateToConfirmationPage();
-		final String actualConfirmationMessage = "We've sent you an email with a link to finish resetting your password.\n"
-				+ "Can't find the email? Try checking your spam folder.\n"
-				+ "If you still can't log in, have us resend the email or contact your Salesforce administrator.";
+		final String actualConfirmationMessage = "We’ve sent you an email with a link to finish resetting your password.\n"
+				+ "Can’t find the email? Try checking your spam folder.\n"
+				+ "If you still can’t log in, have us resend the email or contact your Salesforce administrator.";
 		
 		// assert confirmation message
 		AssertJUnit.assertEquals(
