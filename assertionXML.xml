@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> 
+<suite name="OKR wizard testing" parallel="classes" thread-count="2" >
+ <test name="Test on Firefox"> 
+      <classes>
+         <class name="webdriver.AccountCreation"/>
+         <class name="<package>.<classname>"/>
+         <class name="<package>.<classname>"/>
+         <class name="<package>.<classname>"/>
+      </classes>
+  </test> 
+</suite>
