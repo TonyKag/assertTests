@@ -59,22 +59,28 @@ public class ResetPasswordTest {
 		
 		HomePage__ homePage = PageFactory
 				.initElements(driver, HomePage__.class);
+		
 		// navigate to "Home" page
 		homePage.navigateToHomePage();
+		
 		//click on "Login" btn
 		Login__ loginPage = homePage.clickOnLoginBtn();
+		
 		// click on "Forgot your password" link
 		ResetPassword__ resetPasswordPage = loginPage
 				.clickOnForgotPasswordLink();
 		final String username = "blah@blah.com";
+		
 		// type username
 		resetPasswordPage.type(username);
+		
 		// click on "Continue" btn
 		Confirmation__ confirmationPage = resetPasswordPage
 				.clickOnContinueAndNavigateToConfirmationPage();
 		final String actualConfirmationMessage = "We've sent you an email with a link to finish resetting your password.\n"
 				+ "Can't find the email? Try checking your spam folder.\n"
 				+ "If you still can't log in, have us resend the email or contact your Salesforce administrator.";
+		
 		// assert confirmation message
 		AssertJUnit.assertEquals(
 				"Expected confirmation message doesn't match expected one",
